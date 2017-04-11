@@ -11,14 +11,18 @@
     crossorigin="anonymous">
 </head>
 
-<body>
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
 
   <!-- navbar -->
 
   <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-primary">
-    <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container navbar-collapse collapse " id="navbarTogglerDemo01">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
@@ -44,8 +48,8 @@
       <h1 class="display-2">Full Stack Conf</h1>
       <p class="lead">A One-day Conference About All Things JavaScript!</p>
       <div class="btn-group mt-4" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary btn-lg">Register Now</button>
-        <a class="btn btn-secondary btn-lg active" aria-pressed="true" role="button" href="#speakers">See Speakers</a>        
+        <a role="button" class="btn btn-primary btn-lg" aria-pressed="true" data-toggle="modal" data-target="#register">Register Now</a>
+        <a class="btn btn-secondary btn-lg" role="button" aria-pressed="true" href="#speakers">See Speakers</a>
       </div>
     </div>
   </div>
@@ -54,7 +58,7 @@
 
   <div class="container pt-5">
     <!-- about -->
-    <div class="row">
+    <div id="about" class="row">
       <div class="col-md-4 push-md-4">
         <h3 class="mb-4">About Full Stack Conf</h3>
         <img class="mb-3 img-fluid rounded hidden-xs-down" src="img/pdx.jpg" alt="Portland">
@@ -72,13 +76,13 @@
       </div>
       <div class="col-md-4">
         <h3 class="mb-4">What You'll Learn</h3>
-        <ul>
-          <li><strong>MongoDB</strong>: NoSQL database</li>
-          <li><strong>Angular</strong>: JavaScript framework</li>
-          <li><strong>Express</strong>: Framework for Node</li>
-          <li><strong>Node.js</strong>: JavaScript environment</li>
-          <li><strong>ES2015</strong>: Latest version of JavaScript</li>
-          <li><strong>Babel</strong>: JavaScript compiler</li>
+        <ul class="list-group">
+          <a href="#" class="list-group-item list-group-item-action"><strong>MongoDB</strong>: NoSQL database</a>
+          <a href="#" class="list-group-item list-group-item-action"><strong>Angular</strong>: JavaScript framework </a>
+          <a href="#" class="list-group-item list-group-item-action"><strong>Express</strong>: Framework for Node</a>
+          <a href="#" class="list-group-item list-group-item-action"><strong>Node.js</strong>: JavaScript environment</a>
+          <a href="#" class="list-group-item list-group-item-action"><strong>ES2015</strong>: Latest version of JavaScript</a>
+          <a href="#" class="list-group-item list-group-item-action"><strong>Babel</strong>: JavaScript compiler</a>
         </ul>
       </div>
     </div>
@@ -86,14 +90,131 @@
 
     <!-- speakers -->
     <h1 id="speakers" class="display-4 text-center my-5 text-muted">Speakers</h1>
-    [Speaker bios goes here]
+    <div class="row">
+      <div class="col-md-6 col-lg-4">
+        <div class="card mb-3">
+          <img class="card-img-top img-fluid" src="img/angie.png" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Angie McAngular</h4>
+            <p class="card-text">Angie is a web developer and teacher who is passionate about building scalable, data driven web apps, especially
+              ones that address old problems with new tech! </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card mb-3">
+          <img class="card-img-top img-fluid" src="img/nodestradamus.png" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">NodeStradamus</h4>
+            <p class="card-text">"NodeStra" is a software engineer and philosopher trying to leave the world better than he found it. He codes
+              for non-profits, eCommerce, and large-scale web apps.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card mb-3">
+          <img class="card-img-top img-fluid" src="img/geo.png" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Geo "Lo" Cation</h4>
+            <p class="card-text">Geo is a JavaScript developer working on large-scale applications. He's also a teacher who strives to support
+              students in removing all barriers to learning code.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card mb-3">
+          <img class="card-img-top img-fluid" src="img/ecma.png" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Ecma Scriptnstuff</h4>
+            <p class="card-text">Ecma found her passion for computers and programming over 15 years ago. She is excited to introduce people to
+              the wonderful world of JavaScript.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card mb-3">
+          <img class="card-img-top img-fluid" src="img/jay.png" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Jay Query</h4>
+            <p class="card-text">Jay is a developer, author of CSS: The Missing Manual, JavaScript &amp; jQuery: The Missing Manual, and web development
+              teacher.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card mb-3">
+          <img class="card-img-top img-fluid" src="img/json.png" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Json Babel</h4>
+            <p class="card-text">All of his professional life, Json has worked with computers online; he is a polyglot programmer and likes using
+              the right tools for the job.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- schedule -->
     <h1 id="schedules" class="display-4 text-center my-5 text-muted">Schedule</h1>
-    [Conference schedule goes here]
+    <ul class="list-group" id="schedule">
+      <li class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Keynote: Internet of Things</h5>
+          <span class="badge badge-default badge-pill bg-info px-2 py-2 mt-2">9:00am</span>
+        </div>
+        <p class="mb-1">NodeStradamus</p>
+      </li>
+      <li class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Angular Basics</h5>
+          <span class="badge badge-default badge-pill bg-info px-2 py-2 mt-2">10:00am</span>
+        </div>
+        <p class="mb-1">Angela McAngular</p>
+      </li>
+      <li class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Hey, Mongo!</h5>
+          <span class="badge badge-default badge-pill bg-info px-2 py-2 mt-2">11:00am</span>
+        </div>
+        <p class="mb-1">Jay Query</p>
+      </li>
+      <li class="list-group-item list-group-item-action list-group-item-success flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Lunch</h5>
+          <span class="badge badge-default badge-pill bg-info px-2 py-2 mt-2">12:00pm</span>
+        </div>
+        <p class="mb-1">Free pizza for everyone.</p>
+      </li>
+      <li class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Introducing ES2015</h5>
+          <span class="badge badge-default badge-pill bg-info px-2 py-2 mt-2">1:00pm</span>
+        </div>
+        <p class="mb-1">Ecma Scriptnstuff</p>
+      </li>
+      <li class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Gettin' MEAN</h5>
+          <span class="badge badge-default badge-pill bg-info px-2 py-2 mt-2">2:00pm</span>
+        </div>
+        <p class="mb-1">Geo "Lo" Cation</p>
+      </li>
+      <li class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">What's Babel? </h5>
+          <span class="badge badge-default badge-pill bg-info px-2 py-2 mt-2">3:00pm</span>
+        </div>
+        <p class="mb-1">Json Babel</p>
+      </li>
+    </ul>
+    <!-- /schedule -->
+
 
     <!-- callout button -->
-    <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5">Don't Miss Out, Register Now</button>
+    <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5" data-toggle="modal" data-target="#register">Don't Miss Out, Register Now</button>
 
     <!-- signup form -->
     <hr>
@@ -108,24 +229,131 @@
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Email">
           <span class="input-group-btn">
-        <button class="btn btn-primary" type="button">Sign up</button>
-      </span>
+      <button class="btn btn-primary" type="button">Sign up</button>
+    </span>
         </div>
       </div>
     </div>
     <hr>
     <!-- /signup form -->
 
-  </div>
-  <!-- /.container -->
+    <!-- footer -->
+    <div class="row py-3">
+      <div class="col-md-7">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Comunity</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tracks</a>
+          </li>
+          <li class="nav-item">
+            <div class="btn-group dropup">
+              <button type="button" class="btn btn-secondary">Other Confs</button>
+              <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">CSS Conf</a>
+                <a class="dropdown-item" href="#">Python Conf</a>
+                <a class="dropdown-item" href="#">Java Conf</a>
+                <a class="dropdown-item" href="#">Swift Conf</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-5 text-md-right">
+        <small>&copy; 2016 Full Stack Conf &amp; Treehouse</small>
+      </div>
+    </div>
 
-  <!-- jQuery first, then bootstrap js -->
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-    crossorigin="anonymous"></script>
+
+    <!-- /.container -->
+
+    <!-- ===============================================================
+          FORM MODAL
+    ================================================================ -->
+    <div id="register" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-info text-white">
+            <h5 class="modal-title">Register for Full Stack Conf</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          </div>
+          <div class="modal-body">
+            <!-- registration form-->
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <strong>Hurry!</strong>Eary bird registration ends in 2 days.
+            </div>
+            <form>
+              <h5 class=mb-4>Basic Info</h5>
+              <fieldset class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name">
+              </fieldset>
+              <fieldset class="form-group">
+                <label for="mail">Email:</label>
+                <input type="email" class="form-control" id="mail">
+              </fieldset>
+              <fieldset class="form-group">
+                <label for="role">Job Role:</label>
+                <select class="form-control custom-select" name="user_role" id="role">
+                  <option value="full stack js developer">Full Stack JavaScript Developer</option>
+                  <option value="front end developer">Front End Developer</option>
+                  <option value="back end developer">Back End Developer</option>
+                  <option value="designer">Designer</option>          
+                  <option value="student">Student</option> 
+                </select>
+              </fieldset>
+              <hr class="my-4">
+              <h5 class="mb-4">Which Topics Interest You Most?</h5>
+              <div class="form-group custom-controls-stacked">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">JavaScript Frameworks</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">JavaScript Libraries</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Node.js</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Build Tools</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">ES2015</span>
+                </label>
+              </div>
+            </form>
+            <!-- /registration form-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>
