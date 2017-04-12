@@ -9,6 +9,7 @@
   <!-- bootstrap css -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="css/custom.css">
 </head>
 
 <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -35,7 +36,7 @@
           <a class="nav-link" href="#schedule">Schedule</a>
         </li>
       </ul>
-      <a class="nav-link hidden-md-down text-white" href="http://www.teamtreehouse.com">Presented by Treehouse</a>
+      <a class="nav-link navbar-brand hidden-md-down text-white" href="http://www.teamtreehouse.com">Presented by Treehouse</a>
     </div>
   </nav>
 
@@ -339,6 +340,59 @@
                   <span class="custom-control-description">ES2015</span>
                 </label>
               </div>
+              <hr class="my-4">
+              <h5 class="mb-4">Payment Info</h5>
+              <div class="row">
+                <div class="col-lg-6 form-group">
+                  <label for="cc-num">Card Number:</label>
+                  <input class="form-control" id="cc-num" type="text">
+                </div>
+
+                <div class="col-lg-3 form-group">
+                  <label for="zip">Zip Code:</label>
+                  <input class="form-control" id="zip" type="text">
+                </div>
+
+                <div class="col-lg-3 form-group">
+                  <label for="cvv">CVV:</label>
+                  <input class="form-control" id="cvv" type="text">
+                </div>
+              </div>
+              <div class="row">
+                <label class="col-lg-12">Expiration Date:</label>
+                <div class="col-lg-8 form-group">
+                  <select class="custom-select form-control" id="exp-month">
+                    <option value="1">1 - January</option>
+                    <option value="2">2 - February</option>
+                    <option value="3">3 - March</option>
+                    <option value="4">4 - April</option>
+                    <option value="5">5 - May</option>
+                    <option value="6">6 - June</option>
+                    <option value="7">7 - July</option>
+                    <option value="8">8 - August</option>
+                    <option value="9">9 - September</option>
+                    <option value="10">10 - October</option>
+                    <option value="11">11 - November</option> 
+                    <option value="12">12 - December</option>                           
+                  </select> 
+                </div>
+                <div class="col-lg-4 form-group">
+                  <select class="custom-select" id="exp-year">
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>                          
+                  </select>  
+                </div>
+
+              </div>
+
+              <hr class="my-4">
+              <div class="text-right">
+                <button type="submit" class="btn btn-primary btn-lg">Register</button>
+              </div>
+
             </form>
             <!-- /registration form-->
           </div>
